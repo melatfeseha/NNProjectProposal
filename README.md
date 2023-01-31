@@ -1,7 +1,5 @@
 # Neural Networks for Geoguessr
 
-### Geoguessr Using Neural Networks or maybe the opposite, generating images of places using only their name
-
 ## Project Description
 I will focus on training neural networks using tagged images from across the globe to be able to identify specific locations given their images. I was interested in this as I'm curious to get insight into how images are synthesized and processed under a neural network, and what that learning process would look like. In terms of scope I have none, I would love to be able to accurately identify pictures from across the globe, but I know that might not be completely feasible given the time we have and the data sets we might have access to. 
 
