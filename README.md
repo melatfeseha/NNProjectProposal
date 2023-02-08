@@ -1,3 +1,5 @@
+## Geoguessr AI
+
 ## Project Scope
 
 1. Find/create a fair(ish) dataset to train our model on that is not weighted towards one area or biome.
