@@ -1,4 +1,4 @@
-## Geoguessr AI
+# Geoguessr AI
 
 ## Project Scope
 
@@ -31,50 +31,50 @@
 
 **General Questions**
 
-1. Should we even be doing this?
+* Should we even be doing this?
 
 Yes, our model could have positive applications such as being a useful tool for identifying location. Although our model will hopefully be somewhat accurate on a broad scale, it is very unlikely that our tool will be accurate on a more granular level, which lowers the possibility of malicious use. 
 
-2. What might be the accuracy of a simple non-ML alternative?
+* What might be the accuracy of a simple non-ML alternative?
 
 A non-ML alternative would be difficult to code. It would be nearly impossible to classify an image’s location without any use of ML.
 
-3. What processes will we use to handle appeals/mistakes?
+* What processes will we use to handle appeals/mistakes?
 
 We will attempt to make sure that our model isn’t used in any circumstances where it is critical that the location is correct. We will emphasize that our model isn’t perfect and that the guesses will inevitably have mistakes.
 
-4. How diverse is our team?
+* How diverse is our team?
 
 In certain respects our team is diverse and in others it is not. In terms of geography, we all are from different areas (mostly within the US, however) — Washington, Oregon, New Zealand, Rhode Island, Florida, Germany. This should give us some help in making sure our model reflects geographic diversity. However, we all live in Claremont now and attend the same school, so in that sense we are not very diverse. 
 
 **Data Questions**
 
-1. Is our data valid for its intended use?
+* Is our data valid for its intended use?
 
 With careful consideration of the locations from which we are pulling our images, yes. We will need to be deliberate about ensuring that we have equal representation of locations.
 
-2. What bias could be in our data? (All data contains bias.)
+* What bias could be in our data? (All data contains bias.)
 
 Our data has the potential to be biased towards unequal representation of different geographies. This includes not only unequal representation of certain nations or continents over others, but also certain types of environments (eg: bias towards cities or rural areas)
 
-3. How could we minimize bias in our data and model?
+* How could we minimize bias in our data and model?
 
 Minimizing bias in our data will involve a thoughtful approach to sourcing images. This could involve allotting a certain amount of images to each continent, country or latitude-longitude gridspace. 
 
-4. How should we “audit” our code and data?
+* How should we “audit” our code and data?
 
 We will look into how to do this more thoroughly at a later time.
 
 **Impact Questions**
 
-1. Do we expect different error rates for different sub-groups in the data?
+* Do we expect different error rates for different sub-groups in the data?
 
 Yes. It will typically be a lot easier to correctly identify images taken from major cities than those taken in rural areas since there is a lot more text to use for identification. Additionally, we would expect our error rate to be higher in accurately identifying locations at the same latitudes, where climates are similar.
 
-2. What are likely misinterpretations of the results and what can be done to prevent those misinterpretations?
+* What are likely misinterpretations of the results and what can be done to prevent those misinterpretations?
 
 People may misinterpret the accuracy of this model. It will be necessary to be clear that this model will not be 100% accurate, and should not be viewed as such. 
 
-3. How might we impinge individuals' privacy and/or anonymity?
+* How might we impinge individuals' privacy and/or anonymity?
 
 We might not want to share any of the training data in case it contains personal/sensitive information. Similarly, we might not want to share/store any of the images that people feed into our model.
