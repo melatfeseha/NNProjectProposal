@@ -2,23 +2,23 @@
 
 ## Related Works
 
-1. https://www.theverge.com/2016/2/25/11112594/google-new-deep-learning-image-location-planet
+* https://www.theverge.com/2016/2/25/11112594/google-new-deep-learning-image-location-planet
 
 This article talks about a google AI that recognizes locations based on photographs. It does not use geotags for the location, so it is trained to recognize places just based on the image itself. 
 
-2. https://www.youtube.com/watch?v=YRhxdVk_sIs 
+* https://www.youtube.com/watch?v=YRhxdVk_sIs 
 
 This video provides a brief overview into convolutional neural networks, and what the convolutional layers do that make them particularly effective for pattern recognition in images. A convolutional layer consists of matrix operations over subsets of pixels in a given image. A convolutional layer at first, can pick out simple, geometric patterns, but in conjunction with multiple other convolutional layers, can detect more and more complex objects/patterns.
 
-3. Suresh, Sudharshan, Nathaniel Chodosh, and Montiel Abello. "DeepGeo: Photo localization with deep neural network." arXiv preprint arXiv:1810.03077 (2018). https://arxiv.org/pdf/1810.03077.pdf
+* Suresh, Sudharshan, Nathaniel Chodosh, and Montiel Abello. "DeepGeo: Photo localization with deep neural network." arXiv preprint arXiv:1810.03077 (2018). https://arxiv.org/pdf/1810.03077.pdf
 
 This journal describes a neural net with a very similar goal to our project. The dataset section seemed very relevant to our project. Their neural net attempts to identify which state a 360 degree image was taken. When choosing data, they made sure to gather equal amounts of data from each state. Furthermore, they weighted areas with higher population as higher priority rather than using data from uniformly distributed geography. This will be an important step to consider when we are selecting datasets that will reflect our specific goals. 
 
-4. Gang Li, Ruili Zeng and Ling Lin, "Research on Vehicle License Plate Location Based on Neural Networks," First International Conference on Innovative Computing, Information and Control - Volume I (ICICIC'06), Beijing, 2006, pp. 174-177, doi: 10.1109/ICICIC.2006.507.
+* Gang Li, Ruili Zeng and Ling Lin, "Research on Vehicle License Plate Location Based on Neural Networks," First International Conference on Innovative Computing, Information and Control - Volume I (ICICIC'06), Beijing, 2006, pp. 174-177, doi: 10.1109/ICICIC.2006.507.
 
 This journal article describes the process of using a neural network to determine the location of a license plate. This is relevant to our project since contextual clues like license plates are frequently used to determine the location of an image and we could integrate something like this into our process.
 
-5. Jiyeon Kim and Youngok Kang. Automatic Classification of Photos by Tourist Attractions Using Deep Learning Model and Image Feature Vector Clustering.
+* Jiyeon Kim and Youngok Kang. Automatic Classification of Photos by Tourist Attractions Using Deep Learning Model and Image Feature Vector Clustering.
  
 This paper explores the use of deep learning models to analyze photos taken by tourists to determine the principal draws to certain cities for tourism. They used a dataset scraped from geotagged photos from TripAdvisor reviews to train a model to identify locations in the photos of tourists. This is a subsection of the problem we are trying to solve.
 
