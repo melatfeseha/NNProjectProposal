@@ -2,7 +2,7 @@
 
 ## Geoguessr Neural Net Introduction and Related Works
 
-By Jan Charatan, Aidan Wu, Melat Feseha, Victor Hernandez Brito, Colin Kirkpatrick
+##### By Jan Charatan, Aidan Wu, Melat Feseha, Victor Hernandez Brito, Colin Kirkpatrick
 
 Abstract
 Geoguessr is a popular game that involves guessing the location of an image based on streetview. Users use contextual clues such as signs, buildings and plants to help inform the location they guess. We would like to create a neural network that can accurately identify the location of a given image. This is a challenging project because there are a lot of environmental subtleties that need to be taken into consideration in order to accurately identify different geographic locations. Our solution leverages convolutional neural networks because they can learn the numerous geographic complexities, ones that humans might have trouble identifying, through its training. 
