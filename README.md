@@ -1,5 +1,47 @@
 # Geoguessr AI
 
+Geoguessr Neural Net Introduction and Related Works
+
+By Jan Charatan, Aidan Wu, Melat Feseha, Victor Hernandez Brito, Colin Kirkpatrick
+
+Abstract
+Geoguessr is a popular game that involves guessing the location of an image based on streetview. Users use contextual clues such as signs, buildings and plants to help inform the location they guess. We would like to create a neural network that can accurately identify the location of a given image. This is a challenging project because there are a lot of environmental subtleties that need to be taken into consideration in order to accurately identify different geographic locations. Our solution leverages convolutional neural networks because they can learn the numerous geographic complexities, ones that humans might have trouble identifying, through its training. 
+
+
+1. Introduction
+
+	We plan to train a convolutional neural network on our dataset because these are typically used to operate on visual data. Our neural network needs to be able to identify and classify various environmental factors. In order to do this and train our model accurately, we will need to place significant emphasis on the selection of a large, diverse, well tagged dataset that evenly represents our intended regions. 
+
+We intend to use a dataset titled World-Wide Scale Geotagged Image Dataset for Automatic Image Annotation and Reverse Geotagging sourced from Qualinet databases. This dataset includes 14 million geotagged photos crawled from Flickr. This data set exhibits a bias towards countries in Europe and North America, and even though it is quite large, contains virtually no images from certain geographical regions. We must do some work to overcome this, so finding and helping to create more balanced datasets tagged with location data is one of our main technical challenges. Another challenge we will run into is figuring out how to tune our hyperparameters so that our model is as accurate as possible, and training our model with enough iterations on each set of hyperparameters chosen so that we can properly analyze their effects on the accuracy of our model. 
+
+
+If we have enough time, we also wanted to train a neural network to do the inverse/complementary task of generating an image of a location based on its name. This is a challenging but interesting problem because the way we judge these images is going to have to be pretty subjective, but they might lend some insight into the kinds of things that the neural network is taking into consideration when trying to identify/generate geographic data.
+
+We expect this project to be able to identify countries accurately, and hopefully more specific geographic locations as well. We hope that our model can output the top 3 most likely places that an image was taken from, particularly their city and country, with 90% accuracy of the true location being identified within the top 3.  We also expect to create a neural network that can generate images based on textual input. 
+
+
+2. Related Works
+There exists previous academic work that has attempted to use neural networks to identify the location of an image. Suresh et al.’s paper is very similar to ours—they trained a neural network that takes in pictures of the United States and guesses the most probable state using a balanced dataset that equally samples from all 50 states [7]. Another paper that was slightly more broad in scope than Suresh et al. is Müller-Budack et al [6]. This paper sought to guess geolocation without being limited to a particular country—the neural network trained in this paper is notable because it takes into account information from different spatial resolutions. Another paper that tackles a similar problem to the one we are trying to solve is Kim et al [3]. Part of this paper trains a neural network to classify tourist attractions to aid in the goal of identifying which parts of tourist attractions are most appealing to foreign visitors. Furthermore, other academic work has sought to solve related classification problems as well. For example, Li et al. used a neural network to identify the location of a license plate [4]. Miura et al. sought to classify the geolocation of tweets [5]. In industry, Google has received media coverage for their solution to the problem we are tackling [1]. They have trained a model called PlaNet that can correctly identify the correct continent of an image 48.0% of the time [8]. Finally, we referred to resources on convolutional neural networks such as a video by Deeplizard to learn about the approach we should use for our project [2].
+References:
+
+[1] Brokaw, A. (2016, February 25). Google's latest Ai doesn't need geotags to figure out a photo's location. The Verge.
+
+[2] Deeplizard, “Convolutional Neural Networks (CNNs) explained.” YouTube, 9 December, 2017.
+
+[3] Kim, Jiyeon, and Youngok Kang. "Automatic classification of photos by tourist attractions using deep learning model and image feature vector clustering." ISPRS International Journal of Geo-Information 11.4 (2022): 245.
+
+[4] Li, Gang, Ruili Zeng, and Ling Lin. "Research on vehicle license plate location based on neural networks." First International Conference on Innovative Computing, Information and Control-Volume I (ICICIC'06). Vol. 3. IEEE, 2006.
+
+[5] Miura, Yasuhide, et al. "Unifying text, metadata, and user network representations with a neural network for geolocation prediction." Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2017.
+
+[6] Muller-Budack, Eric, Kader Pustu-Iren, and Ralph Ewerth. "Geolocation estimation of photos using a hierarchical model and scene classification." Proceedings of the European conference on computer vision (ECCV). 2018.
+
+[7] Suresh, Sudharshan, Nathaniel Chodosh, and Montiel Abello. "DeepGeo: Photo localization with deep neural network." arXiv preprint arXiv:1810.03077 (2018).
+
+[8] Weyand, Tobias, Ilya Kostrikov, and James Philbin. "Planet-photo geolocation with convolutional neural networks." Computer Vision–ECCV 2016: 14th European Conference, Amsterdam, The Netherlands, October 11-14, 2016, Proceedings, Part VIII 14. Springer International Publishing, 2016.
+
+
+
 ## Related Works
 
 * https://www.theverge.com/2016/2/25/11112594/google-new-deep-learning-image-location-planet
