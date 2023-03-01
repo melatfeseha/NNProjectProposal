@@ -1,6 +1,6 @@
 # Geoguessr AI
 
-Geoguessr Neural Net Introduction and Related Works
+## Geoguessr Neural Net Introduction and Related Works
 
 By Jan Charatan, Aidan Wu, Melat Feseha, Victor Hernandez Brito, Colin Kirkpatrick
 
@@ -8,7 +8,7 @@ Abstract
 Geoguessr is a popular game that involves guessing the location of an image based on streetview. Users use contextual clues such as signs, buildings and plants to help inform the location they guess. We would like to create a neural network that can accurately identify the location of a given image. This is a challenging project because there are a lot of environmental subtleties that need to be taken into consideration in order to accurately identify different geographic locations. Our solution leverages convolutional neural networks because they can learn the numerous geographic complexities, ones that humans might have trouble identifying, through its training. 
 
 
-1. Introduction
+## 1. Introduction
 
 	We plan to train a convolutional neural network on our dataset because these are typically used to operate on visual data. Our neural network needs to be able to identify and classify various environmental factors. In order to do this and train our model accurately, we will need to place significant emphasis on the selection of a large, diverse, well tagged dataset that evenly represents our intended regions. 
 
@@ -20,9 +20,10 @@ If we have enough time, we also wanted to train a neural network to do the inver
 We expect this project to be able to identify countries accurately, and hopefully more specific geographic locations as well. We hope that our model can output the top 3 most likely places that an image was taken from, particularly their city and country, with 90% accuracy of the true location being identified within the top 3.  We also expect to create a neural network that can generate images based on textual input. 
 
 
-2. Related Works
+## 2. Related Works
 There exists previous academic work that has attempted to use neural networks to identify the location of an image. Suresh et al.’s paper is very similar to ours—they trained a neural network that takes in pictures of the United States and guesses the most probable state using a balanced dataset that equally samples from all 50 states [7]. Another paper that was slightly more broad in scope than Suresh et al. is Müller-Budack et al [6]. This paper sought to guess geolocation without being limited to a particular country—the neural network trained in this paper is notable because it takes into account information from different spatial resolutions. Another paper that tackles a similar problem to the one we are trying to solve is Kim et al [3]. Part of this paper trains a neural network to classify tourist attractions to aid in the goal of identifying which parts of tourist attractions are most appealing to foreign visitors. Furthermore, other academic work has sought to solve related classification problems as well. For example, Li et al. used a neural network to identify the location of a license plate [4]. Miura et al. sought to classify the geolocation of tweets [5]. In industry, Google has received media coverage for their solution to the problem we are tackling [1]. They have trained a model called PlaNet that can correctly identify the correct continent of an image 48.0% of the time [8]. Finally, we referred to resources on convolutional neural networks such as a video by Deeplizard to learn about the approach we should use for our project [2].
-References:
+
+## References:
 
 [1] Brokaw, A. (2016, February 25). Google's latest Ai doesn't need geotags to figure out a photo's location. The Verge.
 
