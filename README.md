@@ -4,7 +4,8 @@
 
 ##### By Jan Charatan, Aidan Wu, Melat Feseha, Victor Hernandez Brito, Colin Kirkpatrick
 
-Abstract
+## Abstract
+
 Geoguessr is a popular game that involves guessing the location of an image based on streetview. Users use contextual clues such as signs, buildings and plants to help inform the location they guess. We would like to create a neural network that can accurately identify the location of a given image. This is a challenging project because there are a lot of environmental subtleties that need to be taken into consideration in order to accurately identify different geographic locations. Our solution leverages convolutional neural networks because they can learn the numerous geographic complexities, ones that humans might have trouble identifying, through its training. 
 
 
@@ -12,8 +13,7 @@ Geoguessr is a popular game that involves guessing the location of an image base
 
 We plan to train a convolutional neural network on our dataset because these are typically used to operate on visual data. Our neural network needs to be able to identify and classify various environmental factors. In order to do this and train our model accurately, we will need to place significant emphasis on the selection of a large, diverse, well tagged dataset that evenly represents our intended regions. 
 
-We intend to use a dataset titled World-Wide Scale Geotagged Image Dataset for Automatic Image Annotation and Reverse Geotagging sourced from Qualinet databases. This dataset includes 14 million geotagged photos crawled from Flickr. This data set exhibits a bias towards countries in Europe and North America, and even though it is quite large, contains virtually no images from certain geographical regions. We must do some work to overcome this, so finding and helping to create more balanced datasets tagged with location data is one of our main technical challenges. Another challenge we will run into is figuring out how to tune our hyperparameters so that our model is as accurate as possible, and training our model with enough iterations on each set of hyperparameters chosen so that we can properly analyze their effects on the accuracy of our model. 
-
+We intend to use a dataset titled "Geolocation - Guessr Images". This dataset includes 50,000 screenshots from Geoguessr that are labeled with the country they were taken in. This data set exhibits a bias towards countries in Europe and North America, and contains virtually no images from certain geographical regions. We must do some work to overcome this, so finding and creating more balanced datasets tagged with location data is one of our main technical challenges. Another challenge we will run into is figuring out how to tune our hyperparameters so that our model is as accurate as possible, and training our model with enough iterations on each set of hyperparameters chosen so that we can properly analyze their effects on the accuracy of our model. 
 
 If we have enough time, we also wanted to train a neural network to do the inverse/complementary task of generating an image of a location based on its name. This is a challenging but interesting problem because the way we judge these images is going to have to be pretty subjective, but they might lend some insight into the kinds of things that the neural network is taking into consideration when trying to identify/generate geographic data.
 
@@ -21,7 +21,20 @@ We expect this project to be able to identify countries accurately, and hopefull
 
 
 ## 2. Related Works
+
 There exists previous academic work that has attempted to use neural networks to identify the location of an image. Suresh et al.’s paper is very similar to ours—they trained a neural network that takes in pictures of the United States and guesses the most probable state using a balanced dataset that equally samples from all 50 states [7]. Another paper that was slightly more broad in scope than Suresh et al. is Müller-Budack et al [6]. This paper sought to guess geolocation without being limited to a particular country—the neural network trained in this paper is notable because it takes into account information from different spatial resolutions. Another paper that tackles a similar problem to the one we are trying to solve is Kim et al [3]. Part of this paper trains a neural network to classify tourist attractions to aid in the goal of identifying which parts of tourist attractions are most appealing to foreign visitors. Furthermore, other academic work has sought to solve related classification problems as well. For example, Li et al. used a neural network to identify the location of a license plate [4]. Miura et al. sought to classify the geolocation of tweets [5]. In industry, Google has received media coverage for their solution to the problem we are tackling [1]. They have trained a model called PlaNet that can correctly identify the correct continent of an image 48.0% of the time [8]. Finally, we referred to resources on convolutional neural networks such as a video by Deeplizard to learn about the approach we should use for our project [2].
+
+
+## 3. Methods Outline
+
+For our project we will use a Kaggle dataset that has 50,000 images from the “countries around the world” Geoguessr map. Each country that is represented in the map has a folder with images from that country. If there is time, we will create a more robust dataset through web scraping Google Maps.
+
+In terms of software, we will use Pytorch Lightning for our project (tentatively). We will start with a convolutional neural network that uses the resnet 50 architecture. We will use Hydra to pass in our hyperparameters to the model. We will use Wandb for logging of how training and validation loss evolve over time and anything else we would like to keep track of. Pytorch Lightning will help us with splitting and loading the data; it will also help us with checkpointing.
+
+One thing we would potentially like to do if we can successfully train a model is create a website where there are a number of test images and users can try to guess against our model. For this, we could potentially use a React frontend and a Flask backend (subject to change). This would allow us to verify if our model can beat the intuition of humans. It would be exciting to try to have the class compete against the model during our presentation.
+
+Some possible pitfalls our project could run into include overfitting our data, hyperparameter optimization and issues with an unevenly distributed dataset. We will address these pitfalls as they present themselves. We will only use ~95% of our data for training, keeping the last ~5% for testing to ensure that we have not overfit our data.
+
 
 ## References:
 
@@ -66,7 +79,6 @@ This journal article describes the process of using a neural network to determin
 This paper explores the use of deep learning models to analyze photos taken by tourists to determine the principal draws to certain cities for tourism. They used a dataset scraped from geotagged photos from TripAdvisor reviews to train a model to identify locations in the photos of tourists. This is a subsection of the problem we are trying to solve.
 
 
-
 ## Project Scope
 
 1. Find/create a fair(ish) dataset to train our model on that is not weighted towards one area or biome.
@@ -74,13 +86,6 @@ This paper explores the use of deep learning models to analyze photos taken by t
 3. Create a neural network that generates an image of a location based on the name given. 
 4. Identify relationships that exist between the two models (if any).
 
-## Group Members
-
-* Jan Charatan
-* Aidan Wu
-* Melat Feseha
-* Victor Hernandez Brito
-* Colin Kirkpatrick
 
 ## Outline
 
@@ -126,11 +131,11 @@ Our data has the potential to be biased towards unequal representation of differ
 
 * How could we minimize bias in our data and model?
 
-Minimizing bias in our data will involve a thoughtful approach to sourcing images. This could involve allotting a certain amount of images to each continent, country or latitude-longitude gridspace. 
+We can minimize the harm from our dataset’s biases by oversampling our underrepresented data. We can do this oversampling in the Kaggle dataset that we’re using initially, and if there’s enough time we can also work to supplement that dataset by adding more scraped images from underrepresented geographic locations. We can also reduce harm by being transparent about the biases that we are aware exist.  
 
 * How should we “audit” our code and data?
 
-We will look into how to do this more thoroughly at a later time.
+Using our data reserved for testing, we can compare how well our code works in different regions. This will give us a sense for the bias present. 
 
 **Impact Questions**
 
