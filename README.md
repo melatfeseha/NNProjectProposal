@@ -36,6 +36,14 @@ One thing we would potentially like to do if we can successfully train a model i
 Some possible pitfalls our project could run into include overfitting our data, hyperparameter optimization and issues with an unevenly distributed dataset. We will address these pitfalls as they present themselves. We will only use ~95% of our data for training, keeping the last ~5% for testing to ensure that we have not overfit our data.
 
 
+## 4. Discussion Outline
+
+We will present the results of our neural network on our validation data to make sure the model is not overfitting the data, and with emphasis placed on accuracy with underrepresented countries so that we can mitigate bias in our model, and acknowledge it accordingly when it is there. Our results will also be interactively accessible within a web app. In this web app, users will be able to upload their own images and see which countries our model predicts. Additionally, they will be able to compete against the model. We will upload some images of locations from around the world and our model will guess where the location is and the user will guess where the location is. Depending on who is closer, points will be given out. We aim to get about 75% accuracy in our model, with the correct answer being in the top 1 of the countries our neural network outputs,
+although we will be a little careful in the way we interpret our results because our model could just be picking up the fact that our data is biased, and guessing the countries based on that rather than learning actual geospatial features particular to a location.
+
+Previous work in this area has used metrics such as top 1 and top 5 accuracy to understand how well a model is performing. We will provide a direct comparison with these metrics to gauge the performance of our model. It will be important to note that we used a different dataset which has a large impact on how high of an accuracy you can achieve. We want to understand the impact that data has on our model, so our goal is to be able to compare model accuracy with the current dataset we have, that has a pretty distinct bias towards global north countries, with the supplemented dataset we create with the scraped images we get from google maps, along with how the model does with oversampling from underrepresented locations. We will support our claims with the top 1 and top 5 accuracies of our model. Additionally, we will use any relevant figures from our Wandb logging. We will also provide images from our dataset and the model guesses so that readers of our report can easily understand what is going on.
+
+
 ## References:
 
 [1] Brokaw, A. (2016, February 25). Google's latest Ai doesn't need geotags to figure out a photo's location. The Verge.
