@@ -15,7 +15,7 @@ While our web app is modeled after the popular browser game GeoGuessr, the abili
 There exists previous academic work that has attempted to use neural networks to identify the location of an image. Suresh et al.’s paper is very similar to ours—they trained a neural network that takes in pictures of the United States and guesses the most probable state using a balanced dataset that equally samples from all 50 states [7]. Another paper that was slightly more broad in scope than Suresh et al. is Müller-Budack et al [6]. This paper sought to guess geolocation without being limited to a particular country—the neural network trained in this paper is notable because it takes into account information from different spatial resolutions. Another paper that tackles a similar problem to the one we are trying to solve is Kim et al [3]. Part of this paper trains a neural network to classify tourist attractions to aid in the goal of identifying which parts of tourist attractions are most appealing to foreign visitors. Furthermore, other academic work has sought to solve related classification problems as well. For example, Li et al. used a neural network to identify the location of a license plate [4]. Miura et al. sought to classify the geolocation of tweets [5]. In industry, Google has received media coverage for their solution to the problem we are tackling [1]. They have trained a model called PlaNet that can correctly identify the correct continent of an image 48.0% of the time [8]. Finally, we referred to resources on convolutional neural networks such as a video by Deeplizard to learn about the approach we should use for our project [2].
 
 ## 4. Ethical Sweep
-	Our primary ethical concerns can be grouped into two broad categories: dataset bias and possible misuse. When collecting our data, we paid particular attention to attempting to ensure that our dataset was equally representative of each nation included in our app. To make sure this was achieved, we used equal numbers of training images for each nation. Our image data was scraped from google maps, which only had data from 55 countries. Therefore, one ethical concern that our group has identified is that our tool only applies to 55 countries, not every country as we had initially hoped. 
+Our primary ethical concerns can be grouped into two broad categories: dataset bias and possible misuse. When collecting our data, we paid particular attention to attempting to ensure that our dataset was equally representative of each nation included in our app. To make sure this was achieved, we used equal numbers of training images for each nation. Our image data was scraped from google maps, which only had data from 55 countries. Therefore, one ethical concern that our group has identified is that our tool only applies to 55 countries, not every country as we had initially hoped. 
  
  Our project inadvertently highlights the ways in which bias against certain regions of the world can show up. Just the fact that we could not grab any images from certain countries is a testament to how difficult it can be, even with the best intentions, to create tools that are unbiased. This highlights how much further we can go in making sure we have the resources to build equitable tools in the future, so that we don’t exclude sections of the world in the tools that we build and the projects that we pursue.  
 
@@ -39,26 +39,6 @@ In general, we were surprised about how accurate the model was with very minimal
 Some things we would do differently is trying to find different types of images to scrape: we have the Kaggle dataset which we supplemented with google maps images, but those provide only a specific kind of look at any particular place, so incorporating images from different angles, focuses, etc. we think would be beneficial in increasing model accuracy. In addition to improving the quality of our dataset, we would spend more time exploring the benefits of different types of neural networks, comparing their architectures and how they contribute to our accuracy. 
 
 Future work would entail a continuation of hyperparameter tuning to increase model accuracy, adding more and different kinds of images to our dataset, as well as training the model to be able to recognize when it cannot infer the location of an image. In addition to that, we also proposed this project with the idea that we would also create a neural network that could generate an image based on text input, particularly, given the name of a location/country, what kind of image would be generated? So in the future, it would be interesting to compare these networks: for example we could have that second neural network generate an image of a location, and pass that image into the neural network we created to see if the neural network can recognize the location as the one originally inputted. 
-
-
-## References:
-
-[1] Brokaw, A. (2016, February 25). Google's latest Ai doesn't need geotags to figure out a photo's location. The Verge.
-
-[2] Deeplizard, “Convolutional Neural Networks (CNNs) explained.” YouTube, 9 December, 2017.
-
-[3] Kim, Jiyeon, and Youngok Kang. "Automatic classification of photos by tourist attractions using deep learning model and image feature vector clustering." ISPRS International Journal of Geo-Information 11.4 (2022): 245.
-
-[4] Li, Gang, Ruili Zeng, and Ling Lin. "Research on vehicle license plate location based on neural networks." First International Conference on Innovative Computing, Information and Control-Volume I (ICICIC'06). Vol. 3. IEEE, 2006.
-
-[5] Miura, Yasuhide, et al. "Unifying text, metadata, and user network representations with a neural network for geolocation prediction." Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2017.
-
-[6] Muller-Budack, Eric, Kader Pustu-Iren, and Ralph Ewerth. "Geolocation estimation of photos using a hierarchical model and scene classification." Proceedings of the European conference on computer vision (ECCV). 2018.
-
-[7] Suresh, Sudharshan, Nathaniel Chodosh, and Montiel Abello. "DeepGeo: Photo localization with deep neural network." arXiv preprint arXiv:1810.03077 (2018).
-
-[8] Weyand, Tobias, Ilya Kostrikov, and James Philbin. "Planet-photo geolocation with convolutional neural networks." Computer Vision–ECCV 2016: 14th European Conference, Amsterdam, The Netherlands, October 11-14, 2016, Proceedings, Part VIII 14. Springer International Publishing, 2016.
-
 
 ## Ethical Sweep
 
@@ -111,3 +91,21 @@ People may misinterpret the accuracy of this model. It will be necessary to be c
 * How might we impinge individuals' privacy and/or anonymity?
 
 We might not want to share any of the training data in case it contains personal/sensitive information. Similarly, we might not want to share/store any of the images that people feed into our model.
+
+## References:
+
+[1] Brokaw, A. (2016, February 25). Google's latest Ai doesn't need geotags to figure out a photo's location. The Verge.
+
+[2] Deeplizard, “Convolutional Neural Networks (CNNs) explained.” YouTube, 9 December, 2017.
+
+[3] Kim, Jiyeon, and Youngok Kang. "Automatic classification of photos by tourist attractions using deep learning model and image feature vector clustering." ISPRS International Journal of Geo-Information 11.4 (2022): 245.
+
+[4] Li, Gang, Ruili Zeng, and Ling Lin. "Research on vehicle license plate location based on neural networks." First International Conference on Innovative Computing, Information and Control-Volume I (ICICIC'06). Vol. 3. IEEE, 2006.
+
+[5] Miura, Yasuhide, et al. "Unifying text, metadata, and user network representations with a neural network for geolocation prediction." Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2017.
+
+[6] Muller-Budack, Eric, Kader Pustu-Iren, and Ralph Ewerth. "Geolocation estimation of photos using a hierarchical model and scene classification." Proceedings of the European conference on computer vision (ECCV). 2018.
+
+[7] Suresh, Sudharshan, Nathaniel Chodosh, and Montiel Abello. "DeepGeo: Photo localization with deep neural network." arXiv preprint arXiv:1810.03077 (2018).
+
+[8] Weyand, Tobias, Ilya Kostrikov, and James Philbin. "Planet-photo geolocation with convolutional neural networks." Computer Vision–ECCV 2016: 14th European Conference, Amsterdam, The Netherlands, October 11-14, 2016, Proceedings, Part VIII 14. Springer International Publishing, 2016.
