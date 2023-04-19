@@ -1,8 +1,6 @@
-# Geoguessr AI
+# Geographic Estimator of Fairly Reasonable Reckoning Efficiency, Y’know?
 
-## Geoguessr Neural Net Introduction and Related Works
-
-##### By Jan Charatan, Aidan Wu, Melat Feseha, Victor Hernandez Brito, Colin Kirkpatrick
+#### By Jan Charatan, Aidan Wu, Melat Feseha, Victor Hernandez Brito, Colin Kirkpatrick
 
 ## 1. Abstract
 GeoGuessr is a popular game that involves guessing the location of an image based on a random Street View location. Users use contextual clues such as signs, buildings, and plants to help inform the location they guess. In this project, we attempted to create a neural network that can take in a random screenshot from Street View and accurately guess the country where the image was taken. To tackle this problem, we scraped a dataset of 110,000 images from 55 countries. Using a convolutional neural network, we were able to train a model that was able to guess the correct country 59.4% of the time and had the correct country in the top five guesses 85.5% of the time. This tool presents a number of ethical questions, such as potential abuse regarding identifying location from personal social media pictures. We believe the potential risks of this tool can be limited by restricting location estimates to country of origin, rather than specific geographic location. 
