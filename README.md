@@ -38,12 +38,29 @@ Typically, countries like the United States have far more available data, theref
 ## 6. Discussion 
 As mentioned above, we began by training our CNN on the Kaggle dataset. At the point where validation loss was the lowest, our model guessed the correct country 43.4% of the time on our validation data and had the correct country in its top five guesses 73.4% of the time on our validation data. Although these results were promising, the problem with the Kaggle dataset is that it is extremely unbalanced and that wealthier nations are overrepresented. For example, the United States makes up 12,000 of the 50,000 files in the dataset. A country like Venezuela on the other hand is only represented in the dataset one time. We were not satisfied with this imbalance since it led to the model simply guessing the overrepresented countries.
 
+<div align="center">
+	<strong>
+		Figure 1: First Training Attempt on Kaggle Dataset with Resnet50
+	</strong>
+</div>
+
 ![Figure 1: First Training Attempt on Kaggle Dataset with Resnet50](/images/image1.png)
 
 Due to this dissatisfaction with the results of our first attempt at training a neural network, we trained a second model on our dataset which contained 2,000 images from 55 countries. We began by training it on the same architecture as before. At the point where validation loss is the lowest, our model was able to guess the correct country 59.4% of the time and had the correct country in the top five guesses 85.5% of the time. Training our model using the Resnet18 architecture and dropping the learning rate to 3e-5 as opposed to 3e-4 did not yield better results so we decided to simply stick with the model we created with Resnet50 and 3e-5 as our learning rate.
-	
+
+<div align="center">
+	<strong>
+		Figure 2: Training the Model on Our Dataset with Resnet 18/50 and Different Learning Rates
+	</strong>
+</div>
+
 ![Figure 2: Training the Model on Our Dataset with Resnet 18/50 and Different Learning Rates](/images/image2.png) 
-<div align="center"> **Figure 2: Training the Model on Our Dataset with Resnet 18/50 and Different Learning Rates** </div> 
+
+<div align="center">
+	<strong>
+		Figure 3: Examples of What Our Model Guessed for Randomly Selected Test Data
+	</strong>
+</div>
 
 ![Figure 3: Examples of What Our Model Guessed for Randomly Selected Test Data](/images/image2.png)
 
