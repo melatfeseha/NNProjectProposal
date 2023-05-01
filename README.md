@@ -17,7 +17,7 @@ While our web app is modeled after the popular browser game [GeoGuessr](https://
 
 ![Screenshot of Geoguessr Game](https://thegatewithbriancohen.com/wp-content/uploads/2016/12/Screen-Shot-2016-12-23-at-10.48.29-PM.png)
 
-We used dataset that had 2,000 images each for 55 countries to train our neural network to identify the country in which the image was taken. When we trained on this dataset, we were able to train a model that was able to guess the correct country 59.4% of the time and had the correct country in the top five guesses 85.5% of the time. Given the success of this first attempt, we propose improving the dataset and further hyperparameter tuning and experimentation with architectures as possible extensions to this work. We are also cognizant of the important ethical considerations raised by this work such as it being used to guess the location from personal social media pictures.
+We used dataset that had 2,000 images each for 55 countries to train our neural network to identify the country in which the image was taken. When we trained on this dataset, we were able to train a model that was able to guess the correct country 59.4% of the time and had the correct country in the top five guesses 85.5% of the time. Given the success of this first attempt, we propose improving the dataset and further hyperparameter tuning and experimentation with architectures as possible extensions to this work. We are also cognizant of the important ethical considerations raised by this work such as it being used to guess the location from personal social media pictures, which is further discussed in the ethical sweep section.
 
 ## 3. Related Works
 
