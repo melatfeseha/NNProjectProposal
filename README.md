@@ -69,6 +69,16 @@ Due to this dissatisfaction with the results of our first attempt at training a 
 
 ![Figure 3: Examples of What Our Model Guessed for Randomly Selected Test Data](/images/image2.png)
 
+![Figure 4](/images/guesses.png)
+
+<div align="center">
+	<strong>
+		Figure 4: Web Application Implementing GEoFFREY
+	</strong>
+</div>
+
+![Figure 5](/images/webpage.png)
+
 
 ## 7. Reflection
 In general, we were surprised about how accurate the model was with very minimal training: when we first created the network, it guessed the country correctly 43.4% of the time and had the correct country in the top five 73.4% of the time, which is better than we expected the network to do initially. With our balanced dataset, we currently have it at 59.4% top one accuracy and 85.5% top five accuracy. It was really cool to go through the various stages of ideation, to dataset creation, to model creation and then to finally seeing the guesses our model makes on real images.
