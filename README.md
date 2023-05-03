@@ -1,4 +1,4 @@
-# Geographic Estimator of Fairly Reasonable Reckoning Efficiency, Y’know?
+# GEoFFREY: Geographic Estimations of Fairly Faultless Rightness Easily Y’know?
 
 #### By Jan Charatan, Aidan Wu, Melat Feseha, Victor Hernandez Brito, Colin Kirkpatrick
 
@@ -154,9 +154,7 @@ We created a simple website that uses our NN to predict countries. Simply upload
 	</strong>
 </div>
 
-![Figure 3: Examples of What Our Model Guessed for Randomly Selected Test Data](/images/image2.png)
-
-![Figure 4](/images/guesses.png)
+![Figure 3](/images/guesses.png)
 
 <div align="center">
 	<strong>
@@ -175,6 +173,7 @@ Some things we would do differently if we had more resources and time would be t
 Beyond improving our dataset, future work could also entail a continuation of hyperparameter tuning to increase model accuracy. In addition to that, we also proposed this project with the idea that we would also create a NN that could generate an image based on text input. Our current dataset could be used to do this and it would be interesting to see the results of something like this. We could even try taking a country name, creating an image and then feeding it back into our NN to see if it could recognize the image.
 
 
+## References
 
 [^1]: Suresh, Sudharshan, Nathaniel Chodosh, and Montiel Abello. "DeepGeo: Photo localization with deep neural network." arXiv preprint arXiv:1810.03077 (2018).
 
